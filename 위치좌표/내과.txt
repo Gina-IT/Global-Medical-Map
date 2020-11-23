@@ -1,0 +1,38 @@
+var internalmedicine = [
+    {
+        place_name: '강문수내과의원',
+        address_name: '울산광역시 남구 대학로 141 (무거동)',
+        english_address: '141, Daehak-ro, Nam-gu, Ulsan, Republic of Korea',
+        phone: '052-249-0645',
+        latlng: new kakao.maps.LatLng(35.547361, 129.261719)
+    },
+	{
+       
+        place_name: '건강한내과의원',
+        address_name: '울산광역시 남구 대학로 136, 4층 (무거동)',
+        english_address: '136, Daehak-ro, Nam-gu, Ulsan, Republic of Korea',
+        phone: '052-247-6813',
+        latlng: new kakao.maps.LatLng(35.546586, 129.262014)
+    },
+	{
+        place_name: '김호철내과의원',
+        address_name: '울산광역시 남구 북부순환도로 13, 3층 (무거동)',
+        english_address: '13, Bukbusunhwan-doro, Nam-gu, Ulsan, Republic of Korea',
+        phone: '052-247-5936',
+        latlng: new kakao.maps.LatLng(35.551459, 129.265152)
+    },
+	{
+        place_name: '서울아침의원',
+        address_name: '울산광역시 남구 대학로 128 (무거동, 하늘빌딩)',
+        english_address: '128, Daehak-ro, Nam-gu, Ulsan, Republic of Korea'
+        phone: '052-277-0868',
+        latlng: new kakao.maps.LatLng(35.545966, 129.261553)
+    },
+	{
+        place_name: '영남의원',
+        address_name: '울산광역시 남구 대학로33번길 17 (무거동)',
+        english_address: '17, Daehak-ro 33beon-gil, Nam-gu, Ulsan, Republic of Korea'
+        phone: '052-277-5074',
+        latlng: new kakao.maps.LatLng(35.539642, 129.254324)
+    }
+];

@@ -1,109 +1,130 @@
 // 마커를 담을 배열입니다
 var markers = [];
 
-var mapContainer = document.getElementById('map_emergency'), // 지도를 표시할 div 
+var mapContainer = document.getElementById('map_oriental_medical_clinic'), // 지도를 표시할 div 
     mapOption = {
         center: new kakao.maps.LatLng(35.543366, 129.259760), // 지도의 중심좌표
         level: 6 // 지도의 확대 레벨
     };  
 
 // 지도를 생성합니다    
-var map_emergency = new kakao.maps.Map(mapContainer, mapOption); 
+var map_oriental_medical_clinic= new kakao.maps.Map(mapContainer, mapOption); 
 
 // 검색 결과 목록이나 마커를 클릭했을 때 장소명을 표출할 인포윈도우를 생성합니다
 var infowindow = new kakao.maps.InfoWindow({zIndex:1});
 
-var emergency = [
+var oriental_medical_clinic = [
     {
-        place_name: '굿모닝병원',
-        address_name: '울산광역시 남구 삼산로 110 (달동)',
-        english_address: '110, Samsan-ro, Nam-gu, Ulsan, Republic of Korea',
-        phone: '052-259-9000',
-        latlng: new kakao.maps.LatLng(35.5349691, 129.3198846)
+        place_name: '동의한의원',
+        address_name: '울산광역시 남구 신복로 25 (무거동)',
+        english_address: '25, Sinbok-ro, Nam-gu, Ulsan, Republic of Korea',
+        phone: '052-247-7221',
+        latlng: new kakao.maps.LatLng(35.548376, 129.259338)
     },
     {
-        place_name: '동강병원',
-        address_name: '울산광역시 중구 태화로 239 (태화동)',
-        english_address: '239, Taehwa-ro, Jung-gu, Ulsan, Republic of Korea',
-        phone: '052-241-1114',
-        latlng: new kakao.maps.LatLng(35.5534076, 129.3020905)
+        place_name: '라임의원(라임한의원)',
+        address_name: '울산광역시 남구 북부순환도로 11, 3층 (무거동)',
+        english_address: '11, Bukbusunhwan-doro, Nam-gu, Ulsan, Republic of Korea',
+        phone: '052-972-7582',
+        latlng: new kakao.maps.LatLng(35.551267, 129.264965)
     },
     {
-        place_name: '동천동강병원',
-        address_name: '울산광역시 중구 외솔큰길 215 (남외동, 동천동강병원)',
-        english_address: '215, Oesolkeun-gil, Jung-gu, Ulsan, Republic of Korea',
-        phone: '052-702-3114',
-        latlng: new kakao.maps.LatLng(35.5685770, 129.3505130)
+        place_name: '맑은숲예인한의원',
+        address_name: '울산광역시 남구 대학로 134 (무거동)',
+        english_address: '134, Daehak-ro, Nam-gu, Ulsan, Republic of Korea',
+        phone: '052-247-5336',
+        latlng: new kakao.maps.LatLng(35.546345, 129.261865)
     },
     {
-        place_name: '울산대학교병원',
-        address_name: '울산광역시 동구 방어진순환도로 877, 울산대학교병원 (전하동)',
-        english_address: '877, Bangeojinsunhwando-ro, Dong-gu, Ulsan, Republic of Korea',
-        phone: '052-250-7000',
-        latlng: new kakao.maps.LatLng(35.5200674, 129.4289868)
+        place_name: '명제한의원',
+        address_name: '울산광역시 남구 대학로 161, 2층 (무거동)',
+        english_address: '161, Daehak-ro, Nam-gu, Ulsan, Republic of Korea',
+        phone: '052-249-8485',
+        latlng: new kakao.maps.LatLng(35.552189, 129.259417)
     },
     {
-        place_name: '울산병원',
-        address_name: '울산광역시 남구 월평로171번길 13 (신정동)',
-        english_address: '13, Wolpyeong-ro 171beon-gil, Nam-gu, Ulsan, Republic of Korea',
-        phone: '052-259-5000',
-        latlng: new kakao.maps.LatLng(35.5462090, 129.3230784)
+        place_name: '문수한의원',
+        address_name: '울산광역시 남구 대학로 138 (무거동, 신정빌딩)',
+        english_address: '138, Daehak-ro, Nam-gu, Ulsan, Republic of Korea',
+        phone: '052-223-7575',
+        latlng: new kakao.maps.LatLng(35.546771, 129.262129)
     },
     {
-        place_name: '울산세민병원',
-        address_name: '울산광역시 중구 학성로 184 (학성동)',
-        english_address: '184, Hakseong-ro, Jung-gu, Ulsan, Republic of Korea',
-        phone: '052-292-2000',
-        latlng: new kakao.maps.LatLng(35.5528549, 129.3416622)
+        place_name: '민한의원',
+        address_name: '울산광역시 남구 대학로169번길 9, 1층 (무거동)',
+        english_address: '9, Daehak-ro 169beon-gil, Nam-gu, Ulsan, Republic of Korea',
+        phone: '052-222-1300',
+        latlng: new kakao.maps.LatLng(35.550168, 129.262322)
     },
     {
-        place_name: '울산시티병원',
-        address_name: '울산광역시 북구 산업로 1007 (연암동)',
-        english_address: '1007, Saneop-ro, Buk-gu, Ulsan, Republic of Korea',
-        phone: '052-280-9000',
-        latlng: new kakao.maps.LatLng(35.5829212, 129.3592591)
+        place_name: '백한의원',
+        address_name: '울산광역시 남구 북부순환도로 11, 지하1층 및2층 (무거동)',
+        english_address: '11, Bukbusunhwan-doro, Nam-gu, Ulsan, Republic of Korea',
+        phone: '052-247-8343',
+        latlng: new kakao.maps.LatLng(35.551316, 129.264957)
     },
     {
-        place_name: '울산제일병원',
-        address_name: '울산광역시 남구 남산로354번길 26 (신정동)',
-        english_address: '26, Namsan-ro 354beon-gil, Nam-gu, Ulsan, Republic of Korea',
-        phone: '052-220-3300',
-        latlng: new kakao.maps.LatLng(35.5482242, 129.3068910)
+        place_name: '본디올종로한의원',
+        address_name: '울산광역시 남구 대학로 164 (무거동, 웰츠타워)',
+        english_address: '164, Daehak-ro, Nam-gu, Ulsan, Republic of Korea',
+        phone: '052-224-3384',
+        latlng: new kakao.maps.LatLng(35.548595, 129.263260)
     },
     {
-        place_name: '울산중앙병원',
-        address_name: '울산광역시 남구 문수로480번길 10 (신정동)',
-        english_address: '10, Munsu-ro 480beon-gil, Nam-gu, Ulsan, Republic of Korea',
-        phone: '052-226-1100',
-        latlng: new kakao.maps.LatLng(35.5315728, 129.3052214)
+        place_name: '사대한의원',
+        address_name: '울산광역시 남구 무거동 1437-4',
+        english_address: '16, Bukbusunhwan-doro, Nam-gu, Ulsan, Republic of Korea',
+        phone: '052-223-6475',
+        latlng: new kakao.maps.LatLng(35.551264, 129.265686)
     },
     {
-        place_name: '울산H병원',
-        address_name: '울산광역시 중구 화합로 363 (반구동)',
-        english_address: '363, Hwahap-ro, Jung-gu, Ulsan, Republic of Korea',
-        phone: '052-290-7100',
-        latlng: new kakao.maps.LatLng(35.5583583, 129.3407750)
+        place_name: '수현한의원',
+        address_name: '울산광역시 남구 신복로 27, 2층 (무거동)',
+        english_address: '27, Sinbok-ro, Nam-gu, Ulsan, Republic of Korea',
+        phone: '052-277-1007',
+        latlng: new kakao.maps.LatLng(35.548471, 129.259161)
     },
     {
-        place_name: '좋은삼정병원',
-        address_name: '울산광역시 남구 무거동 북부순환도로 51 (무거동)',
-        english_address: '51, Bukbusunhwan-doro, Nam-gu, Ulsan, Republic of Korea',
-        phone: '052-220-7500',
-        latlng: new kakao.maps.LatLng(35.552952, 129.268975)
+        place_name: '유창한의원',
+        address_name: '울산광역시 남구 옥현로 92-17 202호(무거동)',
+        english_address: '92-27, Okhyeon-ro, Nam-gu, Ulsan, Republic of Korea Nam-gu, Ulsan, Republic of Korea',
+        phone: '052-249-8600',
+        latlng: new kakao.maps.LatLng(35.544919, 129.262588)
+    },
+    {
+        place_name: '이덕기한의원',
+        address_name: '울산광역시 남구 신복로 12-1, 2층 (무거동)',
+        english_address: '12-1, Sinbok-ro, Nam-gu, Ulsan, Republic of Korea',
+        phone: '052-275-6969',
+        latlng: new kakao.maps.LatLng(35.547864, 129.260896)
+    },
+    {
+        place_name: '천일한의원',
+        address_name: '울산광역시 남구 남부순환도로 37 (무거동)',
+        english_address: '37, Nambusunhwando-ro, Nam-gu, Ulsan, Republic of Korea',
+        phone: '052-277-3460',
+        latlng: new kakao.maps.LatLng(35.546206, 129.264381)
+    },
+    {
+        place_name: '천지인한의원',
+        address_name: '울산광역시 남구 북부순환도로 29 (무거동, 남운산호상가)',
+        english_address: '29, Bukbusunhwan-doro, Nam-gu, Ulsan, Republic of Korea',
+        phone: '052-277-1187',
+        latlng: new kakao.maps.LatLng(35.553262, 129.266445)
     }
-];
+];  
 
 
-displayPlaces(emergency, map_emergency);
-displayPagination(pagination_emergency);
+displayPlaces(oriental_medical_clinic, map_oriental_medical_clinic);
+displayPagination(pagination_oriental_medical_clinic);
 
 
 
 // 검색 결과 목록과 마커를 표출하는 함수입니다
 function displayPlaces(places, map) {
 
-    var listEl = document.getElementById('placesList_emergency'), 
-    menuEl = document.getElementById('menu_wrap_emergency'),
+    var listEl = document.getElementById('placesList_oriental_medical_clinic'), 
+    menuEl = document.getElementById('menu_wrap_oriental_medical_clinic'),
     fragment = document.createDocumentFragment(), 
     bounds = new kakao.maps.LatLngBounds(), 
     listStr = '';
@@ -184,7 +205,7 @@ function addMarker(position, idx, map) {
 
 // 검색결과 목록 하단에 페이지번호를 표시는 함수입니다
 function displayPagination(pagination) {
-    var paginationEl = document.getElementById('pagination_emergency'),
+    var paginationEl = document.getElementById('pagination_oriental_medical_clinic'),
         fragment = document.createDocumentFragment(),
         i; 
 
@@ -216,3 +237,4 @@ function displayInfowindow(marker, title, map) {
     infowindow.setContent(content);
     infowindow.open(map, marker);
 }
+

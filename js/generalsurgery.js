@@ -1,53 +1,52 @@
 // 마커를 담을 배열입니다
 var markers = [];
 
-var mapContainer = document.getElementById('map_nightpharmacy'), // 지도를 표시할 div 
+var mapContainer = document.getElementById('map_generalsurgery'), // 지도를 표시할 div 
     mapOption = {
         center: new kakao.maps.LatLng(35.543366, 129.259760), // 지도의 중심좌표
         level: 6 // 지도의 확대 레벨
     };  
 
 // 지도를 생성합니다    
-var map_nightpharmacy= new kakao.maps.Map(mapContainer, mapOption); 
+var map_generalsurgery= new kakao.maps.Map(mapContainer, mapOption); 
 
 // 검색 결과 목록이나 마커를 클릭했을 때 장소명을 표출할 인포윈도우를 생성합니다
 var infowindow = new kakao.maps.InfoWindow({zIndex:1});
 
-var nightpharmacy = [
+var generalsurgery = [
     {
-        place_name: '가람약국',
-        address_name: '울산광역시 남구 삼산로 159-1 (달동)',
-        english_address: '159-1, Samsan-ro, Nam-gu, Ulsan, Republic of Korea',
-        phone: '052-257-7584',
-        latlng: new kakao.maps.LatLng(35.5369659, 129.3246378)
+        place_name: '굿모닝 창문 외과의원',
+        address_name: '울산광역시 남구 무거동 465-1',
+        english_address: '138, Daehak-ro, Nam-gu, Ulsan, Republic of Korea Nam-gu, Ulsan, Republic of Korea',
+        phone: '052-249-8275',
+        latlng: new kakao.maps.LatLng(35.546831, 129.262114)
     },
     {
-        place_name: '미래팜터미널약국',
-        address_name: '울산광역시 남구 삼산로 282 (삼산동)',
-        english_address: '282, Samsan-ro, Nam-gu, Ulsan, Republic of Korea',
-        phone: '052-257-3196',
-        latlng: new kakao.maps.LatLng(35.5374033, 129.3396381)
+        place_name: '김형규학문외과의원',
+        address_name: '울산광역시 남구 북부순환도로 13, 5층 (무거동, 보령메디칼)',
+        english_address: '13, Bukbusunhwan-doro, Nam-gu, Ulsan, Republic of Korea',
+        phone: '052-224-0717',
+        latlng: new kakao.maps.LatLng(35.551459, 129.265152)
     },
     {
-        place_name: '햇살약국',
-        address_name: '148, Suam-ro, Nam-gu, Ulsan, Republic of Korea',
-        english_address: '',
-        phone: '052-256-9735',
-        latlng: new kakao.maps.LatLng(35.5264717, 129.3227130)
+        place_name: '남종진다모의원',
+        address_name: '울산광역시 남구 북부순환도로 11, 4층 (무거동)',
+        english_address: '11, Bukbusunhwan-doro, Nam-gu, Ulsan, Republic of Korea',
+        phone: '052-224-0085',
+        latlng: new kakao.maps.LatLng(35.551294, 129.264882)
     }
 ];
 
-
-displayPlaces(nightpharmacy, map_nightpharmacy);
-displayPagination(pagination_nightpharmacy);
+displayPlaces(generalsurgery, map_generalsurgery);
+displayPagination(pagination_generalsurgery);
 
 
 
 // 검색 결과 목록과 마커를 표출하는 함수입니다
 function displayPlaces(places, map) {
 
-    var listEl = document.getElementById('placesList_nightpharmacy'), 
-    menuEl = document.getElementById('menu_wrap_nightpharmacy'),
+    var listEl = document.getElementById('placesList_generalsurgery'), 
+    menuEl = document.getElementById('menu_wrap_generalsurgery'),
     fragment = document.createDocumentFragment(), 
     bounds = new kakao.maps.LatLngBounds(), 
     listStr = '';
@@ -128,7 +127,7 @@ function addMarker(position, idx, map) {
 
 // 검색결과 목록 하단에 페이지번호를 표시는 함수입니다
 function displayPagination(pagination) {
-    var paginationEl = document.getElementById('pagination_nightpharmacy'),
+    var paginationEl = document.getElementById('pagination_generalsurgery'),
         fragment = document.createDocumentFragment(),
         i; 
 

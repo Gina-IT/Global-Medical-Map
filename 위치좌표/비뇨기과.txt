@@ -1,0 +1,9 @@
+var urology = [
+    {
+        place_name: '행복한비뇨기과의원',
+        address_name: '울산광역시 남구 대학로 136, 2층 (무거동)',
+        english_address: '136, Daehak-ro, Nam-gu, Ulsan, Republic of Korea',
+        phone: '052-222-0007',
+        latlng: new kakao.maps.LatLng(35.546577, 129.262004)
+    }
+];

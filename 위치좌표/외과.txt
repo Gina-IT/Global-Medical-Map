@@ -1,0 +1,23 @@
+var generalsurgery = [
+    {
+        place_name: '굿모닝 창문 외과의원’
+        address_name: '울산광역시 남구 무거동 465-1',
+        english_address: '138, Daehak-ro, Nam-gu, Ulsan, Republic of Korea Nam-gu, Ulsan, Republic of Korea',
+        phone: ‘052-249-8275',
+        latlng: new kakao.maps.LatLng(35.546831, 129.262114)
+    },
+	{
+        place_name: '김형규학문외과의원',
+        address_name: '울산광역시 남구 북부순환도로 13, 5층 (무거동, 보령메디칼)',
+        english_address: '13, Bukbusunhwan-doro, Nam-gu, Ulsan, Republic of Korea',
+        phone: '052-224-0717',
+        latlng: new kakao.maps.LatLng(35.551459, 129.265152)
+    },
+	{
+        place_name: '남종진다모의원',
+        address_name: '울산광역시 남구 북부순환도로 11, 4층 (무거동)',
+        english_address: '11, Bukbusunhwan-doro, Nam-gu, Ulsan, Republic of Korea',
+        phone: '052-224-0085',
+        latlng: new kakao.maps.LatLng(35.551294, 129.264882)
+    }
+];

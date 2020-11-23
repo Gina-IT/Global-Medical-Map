@@ -1,0 +1,16 @@
+var ophthalmology = [
+    {
+        place_name: '박안과의원',
+        address_name: '울산광역시 남구 대학로 136, (무거동)',
+        english_address: '136, Daehak-ro, Nam-gu, Ulsan, Republic of Korea',
+        phone: '052-223-4311',
+        latlng: new kakao.maps.LatLng(35.546625, 129.262014)
+    },
+	{
+        place_name: '정안과의원',
+        address_name: '울산광역시 남구 북부순환도로 13, 2층 (무거동)',
+        english_address: '13, Bukbusunhwan-doro, Nam-gu, Ulsan, Republic of Korea',
+        phone: '052-247-8275',
+        latlng: new kakao.maps.LatLng(35.551459, 129.265152)
+    }
+];

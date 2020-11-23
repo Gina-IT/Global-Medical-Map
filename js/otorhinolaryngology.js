@@ -1,53 +1,67 @@
 // 마커를 담을 배열입니다
 var markers = [];
 
-var mapContainer = document.getElementById('map_nightpharmacy'), // 지도를 표시할 div 
+var mapContainer = document.getElementById('map_otorhinolaryngology'), // 지도를 표시할 div 
     mapOption = {
         center: new kakao.maps.LatLng(35.543366, 129.259760), // 지도의 중심좌표
         level: 6 // 지도의 확대 레벨
     };  
 
 // 지도를 생성합니다    
-var map_nightpharmacy= new kakao.maps.Map(mapContainer, mapOption); 
+var map_otorhinolaryngology= new kakao.maps.Map(mapContainer, mapOption); 
 
 // 검색 결과 목록이나 마커를 클릭했을 때 장소명을 표출할 인포윈도우를 생성합니다
 var infowindow = new kakao.maps.InfoWindow({zIndex:1});
 
-var nightpharmacy = [
+var otorhinolaryngology = [
     {
-        place_name: '가람약국',
-        address_name: '울산광역시 남구 삼산로 159-1 (달동)',
-        english_address: '159-1, Samsan-ro, Nam-gu, Ulsan, Republic of Korea',
-        phone: '052-257-7584',
-        latlng: new kakao.maps.LatLng(35.5369659, 129.3246378)
+        place_name: '미래이비인후과의원',
+        address_name: '울산광역시 남구 북부순환도로 23 (무거동)',
+        english_address: '23, Bukbusunhwan-doro, Nam-gu, Ulsan, Republic of Korea',
+        phone: '052-221-2653',
+        latlng: new kakao.maps.LatLng(35.55204265400012, 129.26630821489422)
     },
     {
-        place_name: '미래팜터미널약국',
-        address_name: '울산광역시 남구 삼산로 282 (삼산동)',
-        english_address: '282, Samsan-ro, Nam-gu, Ulsan, Republic of Korea',
-        phone: '052-257-3196',
-        latlng: new kakao.maps.LatLng(35.5374033, 129.3396381)
+        place_name: '변준영 이비인후과',
+        address_name: '울산광역시 남구 무거동 1437-4',
+        english_address: '16, Bukbusunhwan-doro, Nam-gu, Ulsan, Republic of Korea',
+        phone: '052-224-7482',
+        latlng: new kakao.maps.LatLng(35.551328,129.265820)
     },
     {
-        place_name: '햇살약국',
-        address_name: '148, Suam-ro, Nam-gu, Ulsan, Republic of Korea',
-        english_address: '',
-        phone: '052-256-9735',
-        latlng: new kakao.maps.LatLng(35.5264717, 129.3227130)
+        place_name: '새신화의원',
+        address_name: '울산광역시 남구 옥현로58번길 4 (무거동)',
+        english_address: '4, Okhyeon-ro 58beon-gil, Nam-gu, Ulsan, Republic of Korea',
+        phone: '052-249-2300',
+        latlng: new kakao.maps.LatLng(35.541275, 129.261898)
+    },
+    {
+        place_name: '우리이비인후과의원',
+        address_name: '울산광역시 남구 대학로 138, 8층 (무거동)',
+        english_address: '138, Daehak-ro, Nam-gu, Ulsan, Republic of Korea',
+        phone: '052-249-2600',
+        latlng: new kakao.maps.LatLng(35.546780, 129.262112)
+    },
+    {
+        place_name: '윤이비인후과의원',
+        address_name: '울산광역시 남구 대학로 141, 2층 (무거동)',
+        english_address: '141, Daehak-ro, Nam-gu, Ulsan, Republic of Korea',
+        phone: '052-223-8787',
+        latlng: new kakao.maps.LatLng(35.547341, 129.261756)
     }
 ];
 
 
-displayPlaces(nightpharmacy, map_nightpharmacy);
-displayPagination(pagination_nightpharmacy);
+displayPlaces(otorhinolaryngology, map_otorhinolaryngology);
+displayPagination(pagination_otorhinolaryngology);
 
 
 
 // 검색 결과 목록과 마커를 표출하는 함수입니다
 function displayPlaces(places, map) {
 
-    var listEl = document.getElementById('placesList_nightpharmacy'), 
-    menuEl = document.getElementById('menu_wrap_nightpharmacy'),
+    var listEl = document.getElementById('placesList_otorhinolaryngology'), 
+    menuEl = document.getElementById('menu_wrap_otorhinolaryngology'),
     fragment = document.createDocumentFragment(), 
     bounds = new kakao.maps.LatLngBounds(), 
     listStr = '';
@@ -128,7 +142,7 @@ function addMarker(position, idx, map) {
 
 // 검색결과 목록 하단에 페이지번호를 표시는 함수입니다
 function displayPagination(pagination) {
-    var paginationEl = document.getElementById('pagination_nightpharmacy'),
+    var paginationEl = document.getElementById('pagination_otorhinolaryngology'),
         fragment = document.createDocumentFragment(),
         i; 
 
