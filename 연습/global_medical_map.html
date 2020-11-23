@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Global medical map</title>
+    <style type="text/css">
+        a {color:black; text-decoration: none}
+        a:hover {color:darkblue; font-weight: bold; text-decoration:none}
+    
+        .div_main{
+            width:80%;
+            height:1000px;
+            margin:0 auto;
+        }
+        .div_list{
+            width:20%;
+            height:400px;
+            float:left;
+        }        
+        .div_map{
+            width:80%;
+            height:400px;
+            float:right;
+        }
+    </style>   
+</head>
+<body>
+    <div class= "div_main">
+        <p><a style="background: darkgreen; color:white">심야 약국/ Pharmacy at late hours/ 深夜药房</a></p>
+        <div class="div_list">
+            <ol>
+                <li>가람약국</li>
+                <li>미래팜 터미널 약국</li>
+                <li>햇살약국</li>
+            </ol>
+        </div>
+        <div class="div_map">
+            <div id="map_nightpharmacy" style="width:100%;height:400px;"></div>
+        </div>
+
+        <p><a style="background: darkgreen; color:white">응급실/ Emergency room/ 急诊室</a></p>
+        <div class="div_list">
+            <ol>
+                <li>굿모닝병원</li>
+                <li>동강병원</li>
+                <li>동천동강병원</li>
+                <li>울산대학교병원</li>
+                <li>울산병원</li>
+                <li>울산시티병원</li>
+                <li>울산세민병원</li>
+                <li>울산제일병원</li>
+                <li>울산H병원</li>
+                <li>중앙병원</li>
+            </ol>
+        </div>
+        <div class="div_map">
+            <div id="map_emergency" style="width:100%;height:400px;"></div>
+        </div>
+
+            <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=72e0376c6a33672f1ee7a8ef909b5bc4&libraries=services"></script>
+
+            <script>
+            var mapContainer_nightpharmacy = document.getElementById('map_nightpharmacy'), // 지도를 표시할 div 
+                mapOption_nightpharmacy = {
+                    center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+                    level: 6 // 지도의 확대 레벨
+                };  
+
+            // 지도를 생성합니다    
+            var map_nightpharmacy = new kakao.maps.Map(mapContainer_nightpharmacy, mapOption_nightpharmacy); 
+
+            // 주소-좌표 변환 객체를 생성합니다
+            var geocoder = new kakao.maps.services.Geocoder();
+
+            geocoder.addressSearch('울산시 남구 꽃대나리로46번길 24', function(result, status) {
+
+               // 정상적으로 검색이 완료됐으면 
+                if (status === kakao.maps.services.Status.OK) {
+
+                    var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
+
+                    // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
+                    map_nightpharmacy.setCenter(coords);
+                } 
+            });
+
+            var addresses = [
+                {
+                    content: '<div>가람약국</div>', 
+                    address: '울산광역시 남구 삼산로 159-1'
+                },
+                            {
+                    content: '<div>미래팜터미널약국</div>', 
+                    address: '울산광역시 남구 삼산로 282'
+                },
+                    {
+                    content: '<div>햇살약국</div>', 
+                    address: '울산광역시 남구 수암로 148'
+                }
+            ];
+
+            var markers_nightpharmacy=[];
+
+            for (var i = 0; i < addresses.length; i ++) {
+
+                // 주소로 좌표를 검색합니다
+                geocoder.addressSearch(addresses[i].address, function(result, status) {
+
+                    // 정상적으로 검색이 완료됐으면 
+                    if (status === kakao.maps.services.Status.OK) {
+
+                        var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
+                        // 마커를 생성합니다
+                        var marker_nightpharmacy = new kakao.maps.Marker({
+                            map: map_nightpharmacy, // 마커를 표시할 지도
+                            position: coords // 마커의 위치
+                        });
+
+                        marker_nightpharmacy.setMap(map_nightpharmacy)
+                    }
+                });
+            }  
+
+
+/* map2 */
+            var mapContainer_emergency = document.getElementById('map_emergency'), // 지도를 표시할 div 
+                mapOption_emergency = {
+                    center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+                    level: 7 // 지도의 확대 레벨
+                };  
+
+            // 지도를 생성합니다    
+            var map_emergency = new kakao.maps.Map(mapContainer_emergency, mapOption_emergency); 
+
+            // 주소-좌표 변환 객체를 생성합니다
+            var geocoder = new kakao.maps.services.Geocoder();
+
+            geocoder.addressSearch('울산광역시 남구 산업로 654', function(result, status) {
+
+               // 정상적으로 검색이 완료됐으면 
+                if (status === kakao.maps.services.Status.OK) {
+
+                    var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
+
+                    // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
+                    map_emergency.setCenter(coords);
+                } 
+            });
+
+            var addresses = [
+                {
+                    content: '<div>울산대학교병원</div>', 
+                    address: '울산광역시 동구 방어진순환도로 877'
+                },
+                {
+                    content: '<div>울산 H병원</div>', 
+                    address: '울산광역시 중구 화합로 363'
+                },
+                {
+                    content: '<div>굿모닝병원</div>', 
+                    address: '울산광역시 남구 삼산로 110'
+                },
+                {
+                    content: '<div>울산병원</div>', 
+                    address: '울산광역시 남구 월평로171번길 13'
+                },
+                {
+                    content: '<div>세민병원</div>', 
+                    address: '울산광역시 중구 학성로 184'
+                },
+                {
+                    content: '<div>동천동강병원</div>', 
+                    address: '울산광역시 중구 외솔큰길 215'
+                },
+                {
+                    content: '<div>중앙병원</div>', 
+                    address: '울산광역시 남구 문수로480번길 10'
+                },
+                {
+                    content: '<div>울산제일병원/div>', 
+                    address: '울산광역시 남구 남산로354번길 26'
+                },
+                {
+                    content: '<div>울산시티병원</div>', 
+                    address: '울산광역시 북구 산업로 1007'
+                },
+                {
+                    content: '<div>동강병원</div>', 
+                    address: '울산광역시 중구 태화로 239'
+                }
+            ];
+
+            var markers_emergency=[]; 
+
+            for (var i = 0; i < addresses.length; i ++) {
+
+                // 주소로 좌표를 검색합니다
+                geocoder.addressSearch(addresses[i].address, function(result, status) {
+
+                    // 정상적으로 검색이 완료됐으면 
+                    if (status === kakao.maps.services.Status.OK) {
+
+                        var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
+                        // 마커를 생성합니다
+                        var marker_emergency = new kakao.maps.Marker({
+                            map: map_emergency, // 마커를 표시할 지도
+                            position: coords // 마커의 위치
+                        });
+
+                        marker_emergency.setMap(map_emergency)
+                    }
+                });
+            }  
+            </script>
+
+</body>
+</html>
