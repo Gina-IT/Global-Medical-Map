@@ -1,0 +1,62 @@
+var emergency room = [
+    {
+        place_name: '굿모닝병원',
+        address_name: '울산광역시 남구 삼산로 110 (달동)',
+        phone: '052-259-9000',
+        latlng: new kakao.maps.LatLng(35.5349691, 129.3198846)
+    },
+    {
+        place_name: '동강병원',
+        address_name: '울산광역시 중구 태화로 239 (태화동)',
+        phone: '052-241-1114',
+        latlng: new kakao.maps.LatLng(35.5534076, 129.3020905)
+    },
+    {
+        place_name: '동천동강병원',
+        address_name: '울산광역시 중구 외솔큰길 215 (남외동, 동천동강병원)',
+        phone: '052-702-3114',
+        latlng: new kakao.maps.LatLng((35.5685770, 129.3505130)
+    }
+    {
+        place_name: '울산대학교병원',
+        address_name: '울산광역시 동구 방어진순환도로 877, 울산대학교병원 (전하동)',
+        phone: '052-250-7000',
+        latlng: new kakao.maps.LatLng(35.5200674, 129.4289868)
+    },
+    {
+        place_name: '울산병원',
+        address_name: '울산광역시 남구 월평로171번길 13 (신정동)',
+        phone: '052-259-5000',
+        latlng: new kakao.maps.LatLng(35.5462090, 129.3230784)
+    },
+    {
+        place_name: '울산시티병원',
+        address_name: '울산광역시 북구 산업로 1007 (연암동)',
+        phone: '052-280-9000',
+        latlng: new kakao.maps.LatLng(35.5829212, 129.3592591)
+    },
+    {
+        place_name: '울산세민병원',
+        address_name: '울산광역시 중구 학성로 184 (학성동)',
+        phone: '052-292-2000',
+        latlng: new kakao.maps.LatLng(35.5528549, 129.3416622)
+    },
+    {
+        place_name: '울산제일병원',
+        address_name: '울산광역시 남구 남산로354번길 26 (신정동)',
+        phone: '052-220-3300',
+        latlng: new kakao.maps.LatLng(35.5482242, 129.3068910)
+    },
+    {
+        place_name: '울산H병원',
+        address_name: '울산광역시 중구 화합로 363 (반구동)',
+        phone: '052-290-7100',
+        latlng: new kakao.maps.LatLng(35.5583583, 129.3407750)
+    },
+    {
+        place_name: '울산중앙병원',
+        address_name: '울산광역시 남구 문수로480번길 10 (신정동)',
+        phone: '052-226-1100',
+        latlng: new kakao.maps.LatLng(35.5315728, 129.3052214)
+    }
+];

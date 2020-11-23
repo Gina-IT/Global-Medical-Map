@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Global Medical Map</title>
+    <style>
+        .map_wrap, .map_wrap * {margin:0;padding:0;font-family:'Malgun Gothic',dotum,'돋움',sans-serif;font-size:12px;}
+        .map_wrap a, .map_wrap a:hover, .map_wrap a:active{color:#000;text-decoration: none;}
+        .map_wrap {position:relative;width:100%;height:500px;}
+
+        .custom_getlocation {position:absolute;top:50px;right:20px;width:50px;height:50px; overflow:hidden;z-index:1;}
+        .custom_getlocation {text-align:center;cursor:pointer;background-color:#f5f5f5;border:1px ridge #bfbfbf;;}   
+        .custom_getlocation span img {width:30px;height:30px;padding:12px 0;border:none;}           
+
+        .div_main{
+            width:80%;
+            height:100%;
+            margin:0 auto;
+        }
+    </style>
+
+    <link rel="stylesheet" href="/css/nightpharmacy.css" type="text/css">
+    <link rel="stylesheet" href="/css/emergency.css" type="text/css">
+
+</head>
+<body>
+    <div class= "div_main">
+
+        <p>심야 약국/ Pharmacy at late hours/ 深夜药房</p>
+        <div class="map_wrap">
+            <div id="map_nightpharmacy" style="width:100%;height:100%;overflow:hidden;"></div>
+            <div id="menu_wrap_nightpharmacy" class="bg_white">
+                <ul id="placesList_nightpharmacy"></ul>
+                <div id="pagination_nightpharmacy"></div>
+            </div>
+            <div class="custom_getlocation radius_border"> 
+                <span onclick="getLocation(map_nightpharmacy)"><img src="/image/target.png" alt="현재 위치 찾기/ find your location"></span>  
+            </div>
+        </div>
+
+        <p>응급실/ Emergency/ 急诊室</p>
+        <div class="map_wrap">
+            <div id="map_emergency" style="width:100%;height:100%;overflow:hidden;"></div>
+            <div id="menu_wrap_emergency" class="bg_white">
+                <ul id="placesList_emergency"></ul>
+                <div id="pagination_emergency"></div>
+            </div>
+            <div class="custom_getlocation radius_border"> 
+                <span onclick="getLocation(map_emergency)"><img src="/image/target.png" alt="현재 위치 찾기/ find your location"></span>  
+            </div>
+        </div>
+
+    </div>
+
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=72e0376c6a33672f1ee7a8ef909b5bc4&libraries=services"></script>
+<script type="text/javascript" src="/js/geolocation.js"></script>
+
+<script type="text/javascript" src="/js/nightpharmacy.js"></script>
+<script type="text/javascript" src="/js/emergency.js"></script>
+
+</body>
+</html>
