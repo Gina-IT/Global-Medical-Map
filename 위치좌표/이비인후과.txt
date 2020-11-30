@@ -1,0 +1,37 @@
+var otorhinolaryngology = [
+    {
+        place_name: '미래이비인후과의원',
+        address_name: '울산광역시 남구 북부순환도로 23 (무거동)',
+        english_address: '23, Bukbusunhwan-doro, Nam-gu, Ulsan, Republic of Korea',
+        phone: '052-221-2653',
+        latlng: new kakao.maps.LatLng(35.55204265400012, 129.26630821489422)
+    },
+	{
+        place_name: '변준영 이비인후과',
+        address_name: '울산광역시 남구 무거동 1437-4',
+        english_address: '16, Bukbusunhwan-doro, Nam-gu, Ulsan, Republic of Korea',
+        phone: '052-224-7482',
+        latlng: new kakao.maps.LatLng(35.551328,129.265820)
+    },
+	{
+        place_name: '새신화의원',
+        address_name: '울산광역시 남구 옥현로58번길 4 (무거동)',
+        english_address: '4, Okhyeon-ro 58beon-gil, Nam-gu, Ulsan, Republic of Korea'
+        phone: '052-249-2300',
+        latlng: new kakao.maps.LatLng(35.541275, 129.261898)
+    },
+	{
+        place_name: '우리이비인후과의원',
+        address_name: '울산광역시 남구 대학로 138, 8층 (무거동)',
+        english_address: '138, Daehak-ro, Nam-gu, Ulsan, Republic of Korea',
+        phone: '052-249-2600',
+        latlng: new kakao.maps.LatLng(35.546780, 129.262112)
+    }
+	{
+        place_name: '윤이비인후과의원',
+        address_name: '울산광역시 남구 대학로 141, 2층 (무거동)',
+        english_address: '141, Daehak-ro, Nam-gu, Ulsan, Republic of Korea',
+        phone: '052-223-8787',
+        latlng: new kakao.maps.LatLng(35.547341, 129.261756)
+    }
+];

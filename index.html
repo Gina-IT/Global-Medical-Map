@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,116 +10,253 @@
 
         .custom_getlocation {position:absolute;top:50px;right:20px;width:50px;height:50px; overflow:hidden;z-index:1;}
         .custom_getlocation {text-align:center;cursor:pointer;background-color:#f5f5f5;border:1px ridge #bfbfbf;;}   
-        .custom_getlocation span img {width:30px;height:30px;padding:12px 0;border:none;}           
-
-        .div_main{
-            width:80%;
-            height:100%;
-            margin:0 auto;
-        }
+        .custom_getlocation span img {width:30px;height:30px;padding:12px 0;border:none;}       
     </style>
 
-    <link rel="stylesheet" href="/css/nightpharmacy.css" type="text/css">
+    <script>
+        function fn_spread(id){ 
+            var getID = document.getElementById(id); 
+            getID.style.display=(getID.style.display=='block') ? 'none' : 'block'; 
+        }
+    </script>
+
+    <link rel="stylesheet" href="/css/pagedeco.css" type="text/css">
+    <link rel="stylesheet" href="/css/dentistry.css" type="text/css">
+    <link rel="stylesheet" href="/css/anesthesiology.css" type="text/css">
+    <link rel="stylesheet" href="/css/dentistry.css" type="text/css">
+    <link rel="stylesheet" href="/css/dermatology.css" type="text/css">
     <link rel="stylesheet" href="/css/emergency.css" type="text/css">
+    <link rel="stylesheet" href="/css/generalsurgery.css" type="text/css">
+    <link rel="stylesheet" href="/css/internalmedicine.css" type="text/css">
+    <link rel="stylesheet" href="/css/neurosurgery.css" type="text/css">
+    <link rel="stylesheet" href="/css/nightpharmacy.css" type="text/css">
+    <link rel="stylesheet" href="/css/obstetricsandgynecology.css" type="text/css">
+    <link rel="stylesheet" href="/css/ophthalmology.css" type="text/css">
+    <link rel="stylesheet" href="/css/oriental_medical_clinic.css" type="text/css">
+    <link rel="stylesheet" href="/css/otorhinolaryngology.css" type="text/css">
+    <link rel="stylesheet" href="/css/urology.css" type="text/css">
 
 </head>
 <body>
+
+    <div class="title">
+        <span style="padding-left:300px">
+            <img src="/image/uou.png" width="60" height="40">
+        </span>
+        <span><font size="4em">
+            <b>글로벌메디컬마케팅 연계전공</b>
+        </font></span>
+        <span style="float:right; padding-right: 300px;">
+            <a href=""><font size="2em">HOME</font></a>
+            |
+            <a style="color:green" href="https://uwins.ulsan.ac.kr/" target="_blank"><font size="2em"> UWINS</font></a>
+            |
+            <a style="color:blue" href= "http://www.ulsan.ac.kr/main/" target="_blank"><font size="2em"> UOU</font></a>
+        </span>
+    </div>
+
+
+    <div class="div_intro">
+        <div class="div_left"><font size="5em"><b>Maps list</b></font>
+            <br><font size="2em">click a medical subject that you want to check the location of hospitals</font>
+            <ol class="list"><font size="3em">
+                <li><a href="#내과">내과 | internal medicine | 内科</a></li>
+                <li><a href="#마취통증의학과">마취통증의학과 | anesthesiology | 麻醉疼痛医学科</a></li>
+                <li><a href="#비뇨기과">비뇨기과 | urology | 泌尿科</a></li>
+                <li><a href="#산부인과">산부인과 | obstetrics and gynecology | 妇产科</a></li>
+                <li><a href="#신경과">신경과 | neurosurgery | 神经科</a></li>
+                <li><a href="#안과">안과 | ophthalmology | 眼科</a></li>
+                <li><a href="#외과">외과 | general surgery | 外科</a></li>
+                <li><a href="#이비인후과">이비인후과 | otorhinolaryngology | 耳鼻喉科</a></li>
+                <li><a href="#치과">치과 | dentistry | 牙科</a></li>
+                <li><a href="#피부과">피부과 | dermatology | 皮肤科</a></li>
+                <li><a href="#한의원">한의원 | oriental medical clinic | 中医院</a></li>
+                <li><a href="#심야약국">심야약국 | Pharmacy at late hours | 深夜药房</a></li>
+                <li><a href="#응급실">응급실 | Emergency | 急诊室</a></li>
+            </font></ol>
+        </div>
+        <div class="div_right">구역3
+
+        </div>
+    </div>
+
+
     <div class= "div_main">
 
-        <p>심야 약국/ Pharmacy at late hours/ 深夜药房</p>
+        <a name="내과"></a>
+        <p class="category" onclick="fn_spread('map_internalmedicine');">내과 | internal medicine | 内科 </p>
+        <div class="map_wrap" >
+            <div id="map_internalmedicine" style="width:100%;height:100%;overflow:hidden"></div>
+            <div id="menu_wrap_internalmedicine" class="bg_white">
+                <ul id="placesList_internalmedicine"></ul>
+            </div>
+            <div class="custom_getlocation"> 
+                <span onclick="getLocation(map_internalmedicine)"><img src="/image/target.png" alt="현재 위치 찾기/ find your location"></span>  
+            </div>
+        </div>
+
+        <a name="마취통증의학과"></a>
+        <p class="category">마취통증의학과 | anesthesiology | 麻醉疼痛医学科 </p>
+        <div class="map_wrap">
+            <div id="map_anesthesiology" style="width:100%;height:100%;overflow:hidden;"></div>
+            <div id="menu_wrap_anesthesiology" class="bg_white">
+                <ul id="placesList_anesthesiology"></ul>
+            </div>
+            <div class="custom_getlocation"> 
+                <span onclick="getLocation(map_anesthesiology)"><img src="/image/target.png" alt="현재 위치 찾기/ find your location"></span>  
+            </div>
+        </div>
+
+        <a name="비뇨기과"></a>
+        <p class="category">비뇨기과 | urology | 泌尿科 </p>
+        <div class="map_wrap">
+            <div id="map_urology" style="width:100%;height:100%;overflow:hidden;"></div>
+            <div id="menu_wrap_urology" class="bg_white">
+                <ul id="placesList_urology"></ul>
+            </div>
+            <div class="custom_getlocation"> 
+                <span onclick="getLocation(map_urology)"><img src="/image/target.png" alt="현재 위치 찾기/ find your location"></span>  
+            </div>
+        </div>
+
+        <a name="산부인과"></a>
+        <p class="category">산부인과 | obstetrics and gynecology | 妇产科 </p>
+        <div class="map_wrap">
+            <div id="map_obstetricsandgynecology" style="width:100%;height:100%;overflow:hidden;"></div>
+            <div id="menu_wrap_obstetricsandgynecology" class="bg_white">
+                <ul id="placesList_obstetricsandgynecology"></ul>
+            </div>
+            <div class="custom_getlocation"> 
+                <span onclick="getLocation(map_obstetricsandgynecology)"><img src="/image/target.png" alt="현재 위치 찾기/ find your location"></span>  
+            </div>
+        </div>
+
+        <a name="신경과"></a>
+        <p class="category">신경과 | neurosurgery | 神经科 </p>
+        <div class="map_wrap">
+            <div id="map_neurosurgery" style="width:100%;height:100%;overflow:hidden;"></div>
+            <div id="menu_wrap_neurosurgery" class="bg_white">
+                <ul id="placesList_neurosurgery"></ul>
+            </div>
+            <div class="custom_getlocation"> 
+                <span onclick="getLocation(map_neurosurgery)"><img src="/image/target.png" alt="현재 위치 찾기/ find your location"></span>  
+            </div>
+        </div>
+
+        <a name="안과"></a>
+        <p class="category">안과 | ophthalmology | 眼科 </p>
+        <div class="map_wrap">
+            <div id="map_ophthalmology" style="width:100%;height:100%;overflow:hidden;"></div>
+            <div id="menu_wrap_ophthalmology" class="bg_white">
+                <ul id="placesList_ophthalmology"></ul>
+            </div>
+            <div class="custom_getlocation"> 
+                <span onclick="getLocation(map_ophthalmology)"><img src="/image/target.png" alt="현재 위치 찾기/ find your location"></span>  
+            </div>
+        </div>
+
+        <a name="외과"></a>
+        <p class="category">외과 | general surgery | 外科 </p>
+        <div class="map_wrap">
+            <div id="map_generalsurgery" style="width:100%;height:100%;overflow:hidden;"></div>
+            <div id="menu_wrap_generalsurgery" class="bg_white">
+                <ul id="placesList_generalsurgery"></ul>
+            </div>
+            <div class="custom_getlocation"> 
+                <span onclick="getLocation(map_generalsurgery)"><img src="/image/target.png" alt="현재 위치 찾기/ find your location"></span>  
+            </div>
+        </div>
+
+        <a name="이비인후과"></a>
+        <p class="category">이비인후과 | otorhinolaryngology | 耳鼻喉科 </p>
+        <div class="map_wrap">
+            <div id="map_otorhinolaryngology" style="width:100%;height:100%;overflow:hidden;"></div>
+            <div id="menu_wrap_otorhinolaryngology" class="bg_white">
+                <ul id="placesList_otorhinolaryngology"></ul>
+            </div>
+            <div class="custom_getlocation"> 
+                <span onclick="getLocation(map_otorhinolaryngology)"><img src="/image/target.png" alt="현재 위치 찾기/ find your location"></span>  
+            </div>
+        </div>
+
+        <a name="치과"></a>
+        <p class="category">치과 | dentistry | 牙科 </p>
+        <div class="map_wrap">
+            <div id="map_dentistry" style="width:100%;height:100%;overflow:hidden;"></div>
+            <div id="menu_wrap_dentistry" class="bg_white">
+                <ul id="placesList_dentistry"></ul>
+            </div>
+            <div class="custom_getlocation"> 
+                <span onclick="getLocation(map_dentistry)"><img src="/image/target.png" alt="현재 위치 찾기/ find your location"></span>  
+            </div>
+        </div>
+
+        <a name="피부과"></a>
+        <p class="category">피부과 | dermatology | 皮肤科 </p>
+        <div class="map_wrap">
+            <div id="map_dermatology" style="width:100%;height:100%;overflow:hidden;"></div>
+            <div id="menu_wrap_dermatology" class="bg_white">
+                <ul id="placesList_dermatology"></ul>
+            </div>
+            <div class="custom_getlocation"> 
+                <span onclick="getLocation(map_dermatology)"><img src="/image/target.png" alt="현재 위치 찾기/ find your location"></span>  
+            </div>
+        </div>
+
+        <a name="한의원"></a>
+        <p class="category">한의원 | oriental medical clinic | 中医院 </p>
+        <div class="map_wrap">
+            <div id="map_oriental_medical_clinic" style="width:100%;height:100%;overflow:hidden;"></div>
+            <div id="menu_wrap_oriental_medical_clinic" class="bg_white">
+                <ul id="placesList_oriental_medical_clinic"></ul>
+            </div>
+            <div class="custom_getlocation"> 
+                <span onclick="getLocation(map_oriental_medical_clinic)"><img src="/image/target.png" alt="현재 위치 찾기/ find your location"></span>  
+            </div>
+        </div>
+
+        <a name="심야약국"></a>
+        <p class="category">심야약국 | Pharmacy at late hours | 深夜药房</p>
         <div class="map_wrap">
             <div id="map_nightpharmacy" style="width:100%;height:100%;overflow:hidden;"></div>
             <div id="menu_wrap_nightpharmacy" class="bg_white">
                 <ul id="placesList_nightpharmacy"></ul>
-                <div id="pagination_nightpharmacy"></div>
             </div>
-            <div class="custom_getlocation radius_border"> 
+            <div class="custom_getlocation"> 
                 <span onclick="getLocation(map_nightpharmacy)"><img src="/image/target.png" alt="현재 위치 찾기/ find your location"></span>  
             </div>
         </div>
 
-        <p>응급실/ Emergency/ 急诊室</p>
+        <a name="응급실"></a>
+        <p class="category">응급실 | Emergency | 急诊室</p>
         <div class="map_wrap">
             <div id="map_emergency" style="width:100%;height:100%;overflow:hidden;"></div>
             <div id="menu_wrap_emergency" class="bg_white">
                 <ul id="placesList_emergency"></ul>
-                <div id="pagination_emergency"></div>
             </div>
-            <div class="custom_getlocation radius_border"> 
+            <div class="custom_getlocation"> 
                 <span onclick="getLocation(map_emergency)"><img src="/image/target.png" alt="현재 위치 찾기/ find your location"></span>  
             </div>
-        </div>
+        </div>    
 
     </div>
 
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=72e0376c6a33672f1ee7a8ef909b5bc4&libraries=services"></script>
-<script type="text/javascript" src="/js/geolocation.js"></script>
 
-<script type="text/javascript" src="/js/nightpharmacy.js"></script>
+<script type="text/javascript" src="/js/anesthesiology.js"></script>
+<script type="text/javascript" src="/js/dentistry.js"></script>
+<script type="text/javascript" src="/js/dermatology.js"></script>
 <script type="text/javascript" src="/js/emergency.js"></script>
-
-</body>
-=======
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Global Medical Map</title>
-    <style>
-        .map_wrap, .map_wrap * {margin:0;padding:0;font-family:'Malgun Gothic',dotum,'돋움',sans-serif;font-size:12px;}
-        .map_wrap a, .map_wrap a:hover, .map_wrap a:active{color:#000;text-decoration: none;}
-        .map_wrap {position:relative;width:100%;height:500px;}
-
-        .custom_getlocation {position:absolute;top:50px;right:20px;width:50px;height:50px; overflow:hidden;z-index:1;}
-        .custom_getlocation {text-align:center;cursor:pointer;background-color:#f5f5f5;border:1px ridge #bfbfbf;;}   
-        .custom_getlocation span img {width:30px;height:30px;padding:12px 0;border:none;}           
-
-        .div_main{
-            width:80%;
-            height:100%;
-            margin:0 auto;
-        }
-    </style>
-
-    <link rel="stylesheet" href="/css/nightpharmacy.css" type="text/css">
-    <link rel="stylesheet" href="/css/emergency.css" type="text/css">
-
-</head>
-<body>
-    <div class= "div_main">
-
-        <p>심야 약국/ Pharmacy at late hours/ 深夜药房</p>
-        <div class="map_wrap">
-            <div id="map_nightpharmacy" style="width:100%;height:100%;overflow:hidden;"></div>
-            <div id="menu_wrap_nightpharmacy" class="bg_white">
-                <ul id="placesList_nightpharmacy"></ul>
-                <div id="pagination_nightpharmacy"></div>
-            </div>
-            <div class="custom_getlocation radius_border"> 
-                <span onclick="getLocation(map_nightpharmacy)"><img src="/image/target.png" alt="현재 위치 찾기/ find your location"></span>  
-            </div>
-        </div>
-
-        <p>응급실/ Emergency/ 急诊室</p>
-        <div class="map_wrap">
-            <div id="map_emergency" style="width:100%;height:100%;overflow:hidden;"></div>
-            <div id="menu_wrap_emergency" class="bg_white">
-                <ul id="placesList_emergency"></ul>
-                <div id="pagination_emergency"></div>
-            </div>
-            <div class="custom_getlocation radius_border"> 
-                <span onclick="getLocation(map_emergency)"><img src="/image/target.png" alt="현재 위치 찾기/ find your location"></span>  
-            </div>
-        </div>
-
-    </div>
-
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=72e0376c6a33672f1ee7a8ef909b5bc4&libraries=services"></script>
-<script type="text/javascript" src="/js/geolocation.js"></script>
-
+<script type="text/javascript" src="/js/generalsurgery.js"></script>
+<script type="text/javascript" src="/js/internalmedicine.js"></script>
+<script type="text/javascript" src="/js/neurosurgery.js"></script>
 <script type="text/javascript" src="/js/nightpharmacy.js"></script>
-<script type="text/javascript" src="/js/emergency.js"></script>
+<script type="text/javascript" src="/js/obstetricsandgynecology.js"></script>
+<script type="text/javascript" src="/js/ophthalmology.js"></script>
+<script type="text/javascript" src="/js/oriental_medical_clinic.js"></script>
+<script type="text/javascript" src="/js/otorhinolaryngology.js"></script>
+<script type="text/javascript" src="/js/urology.js"></script>
 
+<script type="text/javascript" src="/js/geolocation.js"></script>
 </body>
->>>>>>> 14a90bdbc603afef73d76267dac8eaba8d6f79ec
 </html>

@@ -1,0 +1,23 @@
+var neurosurgery = [
+    {
+        place_name: '시민건강의원',
+        address_name: '울산광역시 남구 북부순환도로 48 (무거동)',
+        english_address: '48, Bukbusunhwan-doro, Nam-gu, Ulsan, Republic of Korea'
+        phone: '052-221-0675',
+        latlng: new kakao.maps.LatLng(35.552508, 129.268885)
+    },
+	{
+        place_name: '원정신건강의학과의원',
+        address_name: '울산광역시 남구 북부순환도로 24 (무거동)',
+        english_address: '24, Bukbusunhwan-doro, Nam-gu, Ulsan, Republic of Korea',
+        phone: '052-249-8070',
+        latlng: new kakao.maps.LatLng(35.55162476051311, 129.2664740914464)
+    },
+	{
+        place_name: '페밀리신경외과의원',
+        address_name: '울산광역시 남구 대학로 144, 2,3,8층 (무거동)',
+        english_address: '144, Daehak-ro, Nam-gu, Ulsan, Republic of Korea',
+        phone: '052-249-4100',
+        latlng: new kakao.maps.LatLng(35.547389, 129.262532)
+    }
+];

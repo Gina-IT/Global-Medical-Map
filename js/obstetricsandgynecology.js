@@ -1,108 +1,51 @@
 // 마커를 담을 배열입니다
 var markers = [];
 
-var mapContainer = document.getElementById('map_emergency'), // 지도를 표시할 div 
+var mapContainer = document.getElementById('map_obstetricsandgynecology'), // 지도를 표시할 div 
     mapOption = {
         center: new kakao.maps.LatLng(35.543366, 129.259760), // 지도의 중심좌표
         level: 6 // 지도의 확대 레벨
     };  
 
 // 지도를 생성합니다    
-var map_emergency = new kakao.maps.Map(mapContainer, mapOption); 
+var map_obstetricsandgynecology= new kakao.maps.Map(mapContainer, mapOption); 
 
 // 검색 결과 목록이나 마커를 클릭했을 때 장소명을 표출할 인포윈도우를 생성합니다
 var infowindow = new kakao.maps.InfoWindow({zIndex:1});
 
-var emergency = [
+var obstetricsandgynecology = [
     {
-        place_name: '굿모닝병원',
-        address_name: '울산광역시 남구 삼산로 110 (달동)',
-        english_address: '110, Samsan-ro, Nam-gu, Ulsan, Republic of Korea',
-        phone: '052-259-9000',
-        latlng: new kakao.maps.LatLng(35.5349691, 129.3198846)
+        place_name: '순풍산부인과의원',
+        address_name: '울산광역시 남구 북부순환도로 10 (무거동)',
+        english_address: '10, Bukbusunhwan-doro, Nam-gu, Ulsan, Republic of Korea',
+        phone: '052-222-8833',
+        latlng: new kakao.maps.LatLng(35.550857, 129.265255)
     },
     {
-        place_name: '동강병원',
-        address_name: '울산광역시 중구 태화로 239 (태화동)',
-        english_address: '239, Taehwa-ro, Jung-gu, Ulsan, Republic of Korea',
-        phone: '052-241-1114',
-        latlng: new kakao.maps.LatLng(35.5534076, 129.3020905)
+        place_name: '울산미즈병원',
+        address_name: '울산광역시 남구 남산로 2 (무거동, 울산미즈병원)',
+        english_address: '2, Namsan-ro, Nam-gu, Ulsan, Republic of Korea',
+        phone: '052-220-0100',
+        latlng: new kakao.maps.LatLng(35.552502, 129.270927)
     },
     {
-        place_name: '동천동강병원',
-        address_name: '울산광역시 중구 외솔큰길 215 (남외동, 동천동강병원)',
-        english_address: '215, Oesolkeun-gil, Jung-gu, Ulsan, Republic of Korea',
-        phone: '052-702-3114',
-        latlng: new kakao.maps.LatLng(35.5685770, 129.3505130)
-    },
-    {
-        place_name: '울산대학교병원',
-        address_name: '울산광역시 동구 방어진순환도로 877, 울산대학교병원 (전하동)',
-        english_address: '877, Bangeojinsunhwando-ro, Dong-gu, Ulsan, Republic of Korea',
-        phone: '052-250-7000',
-        latlng: new kakao.maps.LatLng(35.5200674, 129.4289868)
-    },
-    {
-        place_name: '울산병원',
-        address_name: '울산광역시 남구 월평로171번길 13 (신정동)',
-        english_address: '13, Wolpyeong-ro 171beon-gil, Nam-gu, Ulsan, Republic of Korea',
-        phone: '052-259-5000',
-        latlng: new kakao.maps.LatLng(35.5462090, 129.3230784)
-    },
-    {
-        place_name: '울산세민병원',
-        address_name: '울산광역시 중구 학성로 184 (학성동)',
-        english_address: '184, Hakseong-ro, Jung-gu, Ulsan, Republic of Korea',
-        phone: '052-292-2000',
-        latlng: new kakao.maps.LatLng(35.5528549, 129.3416622)
-    },
-    {
-        place_name: '울산시티병원',
-        address_name: '울산광역시 북구 산업로 1007 (연암동)',
-        english_address: '1007, Saneop-ro, Buk-gu, Ulsan, Republic of Korea',
-        phone: '052-280-9000',
-        latlng: new kakao.maps.LatLng(35.5829212, 129.3592591)
-    },
-    {
-        place_name: '울산제일병원',
-        address_name: '울산광역시 남구 남산로354번길 26 (신정동)',
-        english_address: '26, Namsan-ro 354beon-gil, Nam-gu, Ulsan, Republic of Korea',
-        phone: '052-220-3300',
-        latlng: new kakao.maps.LatLng(35.5482242, 129.3068910)
-    },
-    {
-        place_name: '울산중앙병원',
-        address_name: '울산광역시 남구 문수로480번길 10 (신정동)',
-        english_address: '10, Munsu-ro 480beon-gil, Nam-gu, Ulsan, Republic of Korea',
-        phone: '052-226-1100',
-        latlng: new kakao.maps.LatLng(35.5315728, 129.3052214)
-    },
-    {
-        place_name: '울산H병원',
-        address_name: '울산광역시 중구 화합로 363 (반구동)',
-        english_address: '363, Hwahap-ro, Jung-gu, Ulsan, Republic of Korea',
-        phone: '052-290-7100',
-        latlng: new kakao.maps.LatLng(35.5583583, 129.3407750)
-    },
-    {
-        place_name: '좋은삼정병원',
-        address_name: '울산광역시 남구 무거동 북부순환도로 51 (무거동)',
-        english_address: '51, Bukbusunhwan-doro, Nam-gu, Ulsan, Republic of Korea',
-        phone: '052-220-7500',
-        latlng: new kakao.maps.LatLng(35.552952, 129.268975)
+        place_name: '윤혜정산부인과의원',
+        address_name: '울산광역시 남구 대학로 138, 6층 (무거동, 신정빌딩)',
+        english_address: '138, Daehak-ro, Nam-gu, Ulsan, Republic of Korea',
+        phone: '052-277-9595',
+        latlng: new kakao.maps.LatLng(35.546780, 129.262113)
     }
 ];
 
 
-displayPlaces(emergency, map_emergency);
-
+displayPlaces(obstetricsandgynecology, map_obstetricsandgynecology);
 
 
 // 검색 결과 목록과 마커를 표출하는 함수입니다
 function displayPlaces(places, map) {
 
-    var listEl = document.getElementById('placesList_emergency'), 
-    menuEl = document.getElementById('menu_wrap_emergency'),
+    var listEl = document.getElementById('placesList_obstetricsandgynecology'), 
+    menuEl = document.getElementById('menu_wrap_obstetricsandgynecology'),
     fragment = document.createDocumentFragment(), 
     bounds = new kakao.maps.LatLngBounds(), 
     listStr = '';
@@ -180,6 +123,7 @@ function addMarker(position, idx, map) {
 
     return marker;
 }
+
 
 // 검색결과 목록 또는 마커를 클릭했을 때 호출되는 함수입니다
 // 인포윈도우에 장소명을 표시합니다

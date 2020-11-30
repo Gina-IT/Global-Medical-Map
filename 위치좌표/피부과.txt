@@ -1,0 +1,16 @@
+var dermatology = [
+    { 
+        place_name: '엄피부과의원',
+        address_name: '울산광역시 남구 북부순환도로 24, 4층 (무거동)',
+        english_address: '24, Bukbusunhwan-doro, Nam-gu, Ulsan, Republic of Korea',
+        phone: '052-249-5255',
+        latlng: new kakao.maps.LatLng(35.551514309282084, 129.26641916922952)
+    },
+	{
+        place_name: '울산베스트피부과의원',
+        address_name: '울산광역시 남구 대학로 138 2층 (무거동)',
+        english_address: '138, Daehak-ro, Nam-gu, Ulsan, Republic of Korea',
+        phone: '052-225-1750',
+        latlng: new kakao.maps.LatLng(35.546825, 129.262102)
+    }
+];

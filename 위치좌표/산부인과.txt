@@ -1,0 +1,24 @@
+var obstetricsandgynecology = [
+    {
+        place_name: '순풍산부인과의원',
+        address_name: '울산광역시 남구 북부순환도로 10 (무거동)',
+        english_address: '10, Bukbusunhwan-doro, Nam-gu, Ulsan, Republic of Korea',
+        phone: '052-222-8833',
+        latlng: new kakao.maps.LatLng(35.550857, 129.265255)
+    },
+	{
+        place_name: '울산미즈병원',
+        address_name: '울산광역시 남구 남산로 2 (무거동, 울산미즈병원)',
+        english_address: '2, Namsan-ro, Nam-gu, Ulsan, Republic of Korea'
+        phone: '052-220-0100',
+        latlng: new kakao.maps.LatLng(35.552502, 129.270927)
+    },
+	{
+        place_name: '윤혜정산부인과의원',
+        address_name: '울산광역시 남구 대학로 138, 6층 (무거동, 신정빌딩)',
+        english_address '138, Daehak-ro, Nam-gu, Ulsan, Republic of Korea',
+        phone: '052-277-9595',
+        latlng: new kakao.maps.LatLng(35.546780, 129.262113)
+    }
+	
+];

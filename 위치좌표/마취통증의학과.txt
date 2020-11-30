@@ -1,0 +1,23 @@
+var anesthesiology = [
+    {
+        place_name: '김창환마취통증의학과의원(김창환통증의학과의원)',
+        address_name: '울산광역시 남구 대학로 138, 3층 (무거동, 신정빌딩)',
+        english_address: '138, Daehak-ro, Nam-gu, Ulsan, Republic of Korea',
+        phone: '052-277-8888',
+        latlng: new kakao.maps.LatLng(35.546801, 129.262151)
+    },
+	{
+        place_name: '수마취통증의학과의원',
+        address_name: '울산광역시 남구 대학로 136 (무거동)',
+        english_address: '136, Daehak-ro, Nam-gu, Ulsan, Republic of Korea',
+        phone: '052-222-4688',
+        latlng: new kakao.maps.LatLng(35.546791, 129.262108)
+    },
+	{
+        place_name: '편한제통의원',
+        address_name: '울산광역시 남구 북부순환도로 24, 2층 (무거동)',
+        english_address: '24, Bukbusunhwan-doro, Nam-gu, Ulsan, Republic of Korea',
+        phone: '052-225-1555',
+        latlng: new kakao.maps.LatLng(35.551518, 129.266510)
+    }
+];
