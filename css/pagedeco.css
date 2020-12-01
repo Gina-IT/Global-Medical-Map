@@ -46,6 +46,7 @@ a:hover {font-weight: bold; text-decoration:none}
     font-size: 14px;
     color: #585858;
     text-align: right;
+    vertical-align: bottom;
 }
 
 .div_main{
