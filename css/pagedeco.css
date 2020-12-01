@@ -5,7 +5,6 @@ a:hover {font-weight: bold; text-decoration:none}
     
 .title{
     border: none;
-    display: inline;
     border-bottom: 1.5px solid #C0C0C0;
     padding-top: 30px;
     line-height: 70px;
