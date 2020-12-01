@@ -38,7 +38,7 @@ a:hover {font-weight: bold; text-decoration:none}
 .div_right{
 	border:none;
     display: inline-block;
-    padding: 10%;
+    padding-top: 10%;
     width:45%;
     height:100%;
     float:right;
