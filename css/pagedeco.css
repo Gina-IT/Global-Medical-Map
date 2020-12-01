@@ -35,7 +35,7 @@ a:hover {font-weight: bold; text-decoration:none}
     height:100%;
     float:left;
 }
-.div_right{
+.div_right_up{
 	border:none;
     display: inline-block;
     padding-top: 10%;
@@ -45,7 +45,6 @@ a:hover {font-weight: bold; text-decoration:none}
     font-size: 5em;
     color: #585858;
     text-align: center;
-    line-height: 150%
     font-style: italic; 
     font-weight: bold;
 }
