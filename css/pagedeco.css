@@ -9,6 +9,7 @@ a:hover {font-weight: bold; text-decoration:none}
     margin-left: 15%;
     border: none;
     padding-top: 30px;
+    padding-bottom: 10px;
     height: 45px;
     line-height: 45px;
     vertical-align: middle;
