@@ -9,7 +9,8 @@ a:hover {font-weight: bold; text-decoration:none}
     margin-left: 15%;
     border: none;
     padding-top: 30px;
-    line-height: 70px;
+    line-height: 40px;
+    vertical-align: middle;
 }
 
 .div_intro{
